@@ -49,9 +49,10 @@ namespace RealMapper
 
             for (int i = 0; i < meshRenderers.Length; i++)
             {
-                meshRenderers[i].material = shaderFxs[Random.Range(0, shaderFxs.Count)].material;
                 meshRenderers[i].gameObject.GetComponent<VisualEffect>().visualEffectAsset = vfxGraphFxs[Random.Range(0, vfxGraphFxs.Count)].vfx;
                 meshRenderers[i].gameObject.GetComponent<VisualEffect>().SetMesh("Mesh", meshRenderers[i].GetComponent<MeshFilter>().mesh);
+                meshRenderers[i].enabled = false;
+                //meshRenderers[i].material = shaderFxs[Random.Range(0, shaderFxs.Count)].material;
             }
         }
     }

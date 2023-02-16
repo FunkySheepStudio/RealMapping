@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c34dc0fe974844080355d61c1ed8c8, type: 3}
-  m_Name: Grid
+  m_Script: {fileID: 11500000, guid: 7218916394bfad9489441b51c2bde4cf, type: 3}
+  m_Name: Texture
   m_EditorClassIdentifier: 
+  vfx: {fileID: 8926484042661614526, guid: 0d22ea21df3073e408642f844195596e, type: 3}
