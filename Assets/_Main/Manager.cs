@@ -14,6 +14,8 @@ namespace RealMapper
         public GameObject scene;
         public List<Effects.ShaderFx> shaderFxs;
         public List<Effects.VfxGraphFx> vfxGraphFxs;
+        public float effectsDuration = 5;
+        float currentDuration = 0;
 
         private void Start()
         {
@@ -21,6 +23,16 @@ namespace RealMapper
             SetCameras();
             InitFxs();
             SetFxs();
+        }
+
+        private void Update()
+        {
+            currentDuration += Time.deltaTime;
+            if (currentDuration >= effectsDuration)
+            {
+                SetFxs();
+                currentDuration = 0;
+            }
         }
 
         private void SetCameras()
